@@ -23,8 +23,10 @@ export const App = () => {
   const isOriginalOrder = () => {
     return JSON.stringify(goods) === JSON.stringify(goodsFromServer);
   };
+
   const sortAlphabetically = () => {
     const sorted = [...goods].sort((a, b) => a.localeCompare(b));
+
     setGoods(isReversed ? sorted.reverse() : sorted);
     setActiveSort('alphabetically');
   };
